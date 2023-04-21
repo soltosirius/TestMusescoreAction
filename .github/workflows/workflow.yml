@@ -13,10 +13,8 @@ jobs:
         docker build -t musescore .
 
     - name: Generate PDFs
-      env:
-        FOLDER_PATH: ${{ github.event.inputs.folder-path }}
       run: |
-        docker run --rm -v $(pwd)/${{ env.FOLDER_PATH }}:/input musescore
+        docker run --rm -v $(pwd)/input musescore
 
       # The -v flag mounts the folder specified by `FOLDER_PATH` to the `/input` directory in the container
       # The entrypoint.sh script will be automatically executed, with the command `mscore -j /input/job.json` 
@@ -25,4 +23,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: pdfs
-        path: ${{ github.workspace }}/input/scores
+        path: $(pwd)/input/scores
