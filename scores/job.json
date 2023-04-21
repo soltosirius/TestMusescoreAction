@@ -3,7 +3,7 @@
       "in": "test.mscz",
       "out": [
         "test.pdf",
-        [ "../output/test (part for ", ").pdf" ]
+        [ "test (part for ", ").pdf" ]
       ]
     }
   ]
