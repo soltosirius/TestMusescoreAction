@@ -1,0 +1,28 @@
+name: Generate PDFs from MSCZ files
+on: push
+
+jobs:
+  generate-pdfs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: |
+        docker build -t musescore .
+
+    - name: Generate PDFs
+      env:
+        FOLDER_PATH: ${{ github.event.inputs.folder-path }}
+      run: |
+        docker run --rm -v $(pwd)/${{ env.FOLDER_PATH }}:/input musescore
+
+      # The -v flag mounts the folder specified by `FOLDER_PATH` to the `/input` directory in the container
+      # The entrypoint.sh script will be automatically executed, with the command `mscore -j /input/job.json` 
+
+    - name: Upload PDFs as artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: pdfs
+        path: ${{ github.workspace }}/output

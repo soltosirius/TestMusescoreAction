@@ -1,0 +1,9 @@
+[
+    {
+      "in": "test.mscz",
+      "out": [
+        "test.pdf",
+        [ "test (part for ", ").pdf" ]
+      ]
+    }
+  ]
