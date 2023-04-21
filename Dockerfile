@@ -30,7 +30,6 @@ ENV DISPLAY=:99
 
 CMD xvfb :99 -screen 0 1024x768x16
 
-RUN mscore --appimage-extract
 #RUN xvfb-run ./squashfs-root/AppRun -o "test.pdf" "test.mscz"
 
 COPY entrypoint.sh /entrypoint.sh
