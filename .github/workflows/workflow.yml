@@ -20,15 +20,8 @@ jobs:
 
       # The -v flag mounts the folder specified by `FOLDER_PATH` to the `/input` directory in the container
       # The entrypoint.sh script will be automatically executed, with the command `mscore -j /input/job.json` 
-
-    - name: Extract PDFs from container
-      uses: shrink/actions-docker-extract@v2
-      id: extract
-      with:
-        image: musescore
-        path: /input/scores/.
     - name: Upload PDFs as artifacts
       uses: actions/upload-artifact@v2
       with:
         name: pdfs
-        path: ${{ steps.extract.outputs.destination }}
+        path: /input/scores/*
