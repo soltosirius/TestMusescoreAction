@@ -22,8 +22,8 @@ jobs:
           pip os yaml argparse
     
       - name: Build Docker image
-          run: |
-            docker build -t musescore .
+        run: |
+          docker build -t musescore .
 
       - name: Generate PDFs
         run: |
