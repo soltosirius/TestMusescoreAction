@@ -1,9 +1,9 @@
 [
     {
-      "in": "test.mscz",
+      "in": "Ace Combat 7 Medley.mscz",
       "out": [
-        "test.pdf",
-        [ "test (part for ", ").pdf" ]
+        "Ace Combat 7 Medley.pdf",
+        [ "", "-AceCombat7Medley.pdf" ]
       ]
     }
   ]
