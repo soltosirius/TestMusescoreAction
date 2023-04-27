@@ -1,5 +1,8 @@
 name: Generate PDFs from MSCZ files
-on: push
+on: 
+  release:
+   types:
+      - published
 
 jobs:
   generate-pdfs:
@@ -34,3 +37,10 @@ jobs:
         with:
           name: pdfs
           path: scores/parts/*
+      - name: Attach artifact to release
+        uses: actions/upload-release-asset@v1
+        with:
+          asset_path: scores/parts/*
+          asset_name: pdfs.zip
+          asset_content_type: application/zip
+          tag_name: ${{ github.ref }}
