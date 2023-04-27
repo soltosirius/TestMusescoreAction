@@ -1,9 +1,9 @@
 [
     {
-      "in": "YOUR MUSESCORE FILE.mscz",
+      "in": "Yoshi's Island Suite.mscz",
       "out": [
-        "YOUR MUSESCORE FILE.pdf",
-        [ "", "-AceCombat7Medley.pdf" ]
+        "Yoshi's Island Suite.pdf",
+        [ "", "-Yoshi's Island Suite.pdf" ]
       ]
     }
   ]
