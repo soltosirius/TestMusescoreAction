@@ -32,11 +32,13 @@ jobs:
       - name: Sort PDFs
         run: |
           python scripts/partsorter.py "scores/" "partmap.yaml"
-      - name: Upload PDFs as artifacts
-        uses: actions/upload-artifact@v2
+      - name: Create artifact
+        uses: thedoctor0/zip-release@0.7.1
         with:
-          name: pdfs
-          path: scores/parts/*
+          type: 'zip'
+          filename: 'pdfs.zip'
+          directory: 'scores/'
+          path: 'parts/'
       - name: Attach artifact to release
         uses: actions/upload-release-asset@v1
         env:
