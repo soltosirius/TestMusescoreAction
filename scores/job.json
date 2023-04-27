@@ -1,8 +1,8 @@
 [
     {
-      "in": "Ace Combat 7 Medley.mscz",
+      "in": "YOUR MUSESCORE FILE.mscz",
       "out": [
-        "Ace Combat 7 Medley.pdf",
+        "YOUR MUSESCORE FILE.pdf",
         [ "", "-AceCombat7Medley.pdf" ]
       ]
     }
