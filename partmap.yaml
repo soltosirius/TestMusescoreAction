@@ -1,0 +1,58 @@
+choir:
+  - soprano
+  - alto
+  - tenor
+  - bass
+  - solo
+  - solo_+_satb
+  - satb
+percussion:
+  - concert_bass_drum
+  - concert_snare_drum
+  - concert_toms
+  - congas
+  - cymbal
+  - drumset
+  - maracas
+  - percussion
+  - tambourine
+  - timpani
+  - triangle
+  - wood_blocks
+  - xylophone
+  - glockenspiel
+brass:
+  - baritone_saxophone
+  - bb_trumpet
+  - euphonium
+  - euphonium_(treble_clef)
+  - horn_in_f
+  - trombone
+  - tuba
+woodwinds:
+  - alto_saxophone
+  - bb_clarinet
+  - bassoon
+  - english_horn
+  - flute
+  - oboe
+  - piccolo
+  - tenor_saxophone
+strings:
+  - contrabass
+  - harp
+  - viola
+  - violin_i
+  - violin_ii
+  - violoncello
+piano:
+  - piano
+  - bass_synthesizer
+  - piano_+_synth
+guitar_and_bass:
+  - backing_electric_guitar
+  - backing_electric_guitar_(tablature)
+  - electric_bass
+  - electric_bass_(tablature)
+  - lead_electric_guitar
+  - lead_electric_guitar_(tablature)
