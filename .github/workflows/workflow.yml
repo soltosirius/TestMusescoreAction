@@ -37,8 +37,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'pdfs.zip'
-          directory: 'scores/'
-          path: 'parts/'
+          directory: 'scores/parts'
       - name: Attach artifact to release
         uses: actions/upload-release-asset@v1
         env:
